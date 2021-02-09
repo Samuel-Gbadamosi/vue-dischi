@@ -22,7 +22,9 @@ var app = new Vue({
      let filterPics = result.data.response;
       console.log(this.filterPics);
 
-      
+      // will try to apply the function to select bonus later if possoble
+
+
     })
 
 
