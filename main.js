@@ -23,7 +23,9 @@ var app = new Vue({
       console.log(this.filterPics);
 
       // will try to apply the function to select bonus later if possoble
-
+     if(this.genereAc !== 'all'){
+       this.pictures = pic.genre;
+     }
 
     })
 
