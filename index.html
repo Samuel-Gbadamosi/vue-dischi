@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ex-dischi-musicali</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div id="app">
+
+
+        <header>
+            <div class="container">
+                <img src="logo.png" alt="logo" />
+            </div>
+        </header>
+
+        <select @click="selectores" v-model="genereAc">
+          <option value="all">all</option>
+          <option value="pop">pop</option>
+          <option value="rock">rock</option>
+          <option value="metal">metal</option>
+          <option value="jazz">jazz</option>
+
+        </select>
+
+        <div class="cds-container container">
+            <!-- Disco ad esempio -->
+            <div class="cd" v-for="pic in pictures">
+                <img :src="pic.poster"  :alt="pic.title">
+                <h3>{{pic.title}}</h3>
+                <span class="author">{{pic.author}}</span>
+                <span class="year">{{pic.year}}</span>
+                <p>{{pic.genre}}</p>
+            </div>
+        </div>
+
+    <div>
+
+    </div>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
